@@ -7,11 +7,11 @@ using Charades.Business.Interface;
 
 namespace Charades.Controllers
 {
-    public class HomeController : Controller
+    public class PlayController : Controller
     {
         private readonly IPhraseModule _phraseModule;
 
-        public HomeController(IPhraseModule phraseModule)
+        public PlayController(IPhraseModule phraseModule)
 	    {
             _phraseModule = phraseModule;
         }
