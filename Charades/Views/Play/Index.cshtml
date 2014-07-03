@@ -1,4 +1,4 @@
-﻿
+﻿@model Charades.Business.Interface.DTO.PhraseDto
 @{
     ViewBag.Title = "Play";
 }
@@ -6,6 +6,12 @@
 <h2>Lets Play!</h2>
 
 <div>
-    I will add the following here, get random phrase from DB, start timer, once timer runs out hide phrase, have button to get new random one.
+    <h3>
+        @Model.Name
+        @if (Model.Year.HasValue)
+        {
+            @Model.Year.Value;
+        }
+    </h3>
 </div>
 

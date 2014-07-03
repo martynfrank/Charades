@@ -17,9 +17,13 @@ namespace Charades.Business.Service
             _phraseRepository = phraseRepository;
         }
 
-        public IEnumerable<PhraseDto> GetRandomPhrase()
+        public PhraseDto GetRandomPhrase()
         {
-            return _phraseRepository.Phrases.Select(x => new PhraseDto { Name = x.Name, Year = x.Year, Type = x.Type });
+            var numberofPhrases = _phraseRepository.Phrases.Count();
+            var random = new Random();
+            var randomNumber = random.Next(0, numberofPhrases);
+            var phrase = _phraseRepository.Phrases.OrderBy(x=> x.Id).Skip(randomNumber).First();
+            return new PhraseDto { Name = phrase.Name, Year = phrase.Year, Type = phrase.Type };
         }
     }
 }

@@ -9,6 +9,6 @@ namespace Charades.Business.Interface
 {
     public interface IPhraseModule
     {
-        IEnumerable<PhraseDto> GetRandomPhrase();
+        PhraseDto GetRandomPhrase();
     }
 }
