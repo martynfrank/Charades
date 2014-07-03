@@ -36,7 +36,6 @@ namespace Charades.App_Start
         /// change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.</remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
-            container.RegisterType<IUnitOfWork, UnitOfWork>(new PerRequestLifetimeManager());
             container.RegisterType<IPhraseRepository, PhraseRepository>();
             container.RegisterType<IPhraseModule, PhraseModule>();
         }

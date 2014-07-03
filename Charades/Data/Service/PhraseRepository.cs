@@ -10,9 +10,10 @@ namespace Charades.Data.Service
     {
         private CharadesEntities _context;
 
-        public PhraseRepository(CharadesEntities context)
+        public PhraseRepository()
         {
-            _context = context;
+            _context = new CharadesEntities();
+            _context.Configuration.LazyLoadingEnabled = false;
         }
 
         public IQueryable<Phrase> Phrases

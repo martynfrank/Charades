@@ -129,6 +129,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Film.jpg" />
+    <Content Include="Content\Images\Music.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -144,7 +146,6 @@
     <Compile Include="Business\Interface\IPhraseModule.cs" />
     <Compile Include="Business\Service\PhraseModule.cs" />
     <Compile Include="Data\Interface\IPhraseRepository.cs" />
-    <Compile Include="Data\Interface\IUnitOfWork.cs" />
     <Compile Include="Data\Interface\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,7 +164,6 @@
     <Compile Include="Data\Interface\Phrase.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Service\UnitOfWork.cs" />
     <Compile Include="Data\Service\PhraseRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

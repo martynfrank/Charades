@@ -16,7 +16,6 @@ namespace Charades.Controllers
             _phraseModule = phraseModule;
         }
 
-        // GET: Home
         public ActionResult Index()
         {
             return View(_phraseModule.GetRandomPhrase());
