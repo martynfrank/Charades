@@ -7,11 +7,8 @@
 
 <div>
     <h3>
-        @Model.Name
-        @if (Model.Year.HasValue)
-        {
-            @Model.Year.Value;
-        }
+        <span data-bind="text: currentPhrase().Name"></span>
+        <span></span>
     </h3>
 </div>
 

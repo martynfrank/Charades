@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
+using Charades.App_Start;
 
 namespace Charades
 {
@@ -13,6 +15,7 @@ namespace Charades
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.Start(BundleTable.Bundles);
         }
     }       
 }
